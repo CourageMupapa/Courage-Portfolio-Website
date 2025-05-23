@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Courage Mupapa - Portfolio</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Header with purple gradient and layout */
+    header {
+      background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+      color: #fff;
+      padding: 50px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      border-radius: 0 0 30px 30px;
+    }
+
+    /* Profile picture with toggle zoom */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      flex-shrink: 0;
+      transition: transform 0.3s, border-radius 0.3s;
+      will-change: transform, border-radius;
+      cursor: pointer;
+    }
+
+
+
+
+.zoomed {
+  transform: scale(1.7); /* Increased zoom size */
+  border-radius: 5%;
+}
+
+
+
+
+
+    /* Info text container */
+    .info-text {
+      max-width: calc(100% - 270px);
+    }
+
+    /* Enlarged Header Text */
+    header h1 {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    /* Sections styling with hover effects */
+    section {
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(2, 2, 2, 0.05);
+      margin-bottom: 30px;
+      transition: transform 0.3s, box-shadow 0.3s, opacity 0.5s;
+    }
+    section:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+
+    /* Headings with purple borders */
+    h2 {
+      color: #6a0dad;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #6a0dad;
+      padding-bottom: 10px;
+      font-weight: 600;
+    }
+
+    /* Responsive adjustments */
+    @media(max-width: 768px){
+      header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+      }
+      .info-text {
+        max-width: 100%;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="container mb-4">
+    <img src="Cou.jpg" alt="Profile Picture" class="profile-pic" id="profilePic" />
+    <div class="info-text">
+      <h1>Courage Mupapa</h1>
+      <p>BSc (Hons) in Computer Science</p>
+      <p class="lead">Passionate about Cybersecurity, AI, Database Management & System Analysis</p>
+    </div>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Courage Mupapa</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Sections -->
+  <section id="about" class="container my-5">
+    <h2>About Me</h2>
+    <p>I am currently pursuing a Bachelor of Science Honours Degree in Computer Science at Midlands State University.</p>
+  </section>
+
+  <section id="expertise" class="container my-5">
+    <h2>Expertise & Areas of Interest</h2>
+    <ul>
+      <li>Cybersecurity</li>
+      <li>Artificial Intelligence</li>
+      <li>Database Management</li>
+      <li>System Analysis</li>
+    </ul>
+  </section>
+
+  <section id="skills" class="container my-5">
+    <h2>Technical Skills</h2>
+    <p><strong>Programming Language:</strong> Python</p>
+    <p><strong>Tools & Technologies:</strong> MySQL, HTML, Visual Studio Code</p>
+  </section>
+
+  <section id="projects" class="container my-5">
+    <h2>Projects</h2>
+    <div class="mb-4 project-card">
+      <h3>Road Sign Recognition</h3>
+      <p>This system uses AI and computer vision to detect road signs in real time, helping drivers or navigation systems recognize important instructions. It classifies signs like speed limits and warnings, then provides visual or audio feedback for safer driving. Advanced versions can integrate with AR or autonomous vehicles to enhance road awareness.</p>
+    </div>
+    <div class="project-card">
+      <h3>Password Strength Analyzer</h3>
+      <p>This tool evaluates the security of passwords by checking length, complexity, and exposure to breaches. It assigns a strength score, flags weak passwords, and suggests improvements, like adding special characters or avoiding common words. Some versions offer real-time feedback to enhance online security while users create new passwords.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="container my-5">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:couragemupapa@gmail.com">couragemupapa@gmail.com</a></p>
+    <p>Phone: <a href="tel:+263781973737">+263 781 973 737</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/courage-mupapa-112042367/" target="_blank">Courage Mupapa</a></p>
+    <p>GitHub: <a href="https://github.com/CourageMupapa" target="_blank">CourageMupapa</a></p>
+  </section>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- JavaScript for toggle zoom -->
+  <script>
+    document.getElementById("profilePic").addEventListener("click", function() {
+      this.classList.toggle("zoomed");
+    });
+  </script>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- JavaScript for Navigation Highlighting & Section Fade -->
+<script>
+  document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+
+      // Remove 'active' from all links
+      document.querySelectorAll('.navbar-nav .nav-link').forEach(item => item.classList.remove('active'));
+
+      // Add 'active' class to clicked link
+      this.classList.add('active');
+
+      const targetId = this.getAttribute('href').substring(1);
+
+      // Fade out all sections
+      document.querySelectorAll('section').forEach(sec => {
+        if (sec.id === targetId) {
+          sec.style.opacity = '1';
+          sec.style.pointerEvents = 'auto';
+          sec.style.transition = 'opacity 0.5s ease-in-out';
+          sec.style.display = 'block';
+        } else {
+          sec.style.opacity = '0';
+          sec.style.pointerEvents = 'none';
+          sec.style.transition = 'opacity 0.5s ease-in-out';
+          setTimeout(() => {
+            if (sec.id !== targetId) {
+              sec.style.display = 'none';
+            }
+          }, 500);
+        }
+      });
+
+      // Scroll to the section
+      document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
